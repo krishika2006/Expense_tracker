@@ -1,0 +1,31 @@
+FinanceFlow Tracker Project Structure
+
+/finance-tracker
+├── backend (Java Spring Boot)
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java/com/financeflow
+│   │   │   │   ├── controllers/TransactionController.java
+│   │   │   │   ├── entities/Transaction.java
+│   │   │   │   ├── repositories/TransactionRepository.java
+│   │   │   │   ├── services/TransactionService.java
+│   │   │   │   └── FinanceFlowApplication.java
+│   │   │   └── resources
+│   │   │       ├── application.properties
+│   │   │       └── db/migration/V1__init_schema.sql
+│   └── pom.xml
+├── frontend (Next.js App Router)
+│   ├── src
+│   │   ├── app
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx (Dashboard)
+│   │   │   └── transactions/page.tsx
+│   │   ├── components
+│   │   │   ├── DashboardCharts.tsx
+│   │   │   ├── TransactionTable.tsx
+│   │   │   └── ui/
+│   │   ├── lib/api.ts
+│   │   └── types/index.ts
+│   ├── tailwind.config.js
+│   └── package.json
+└── docker-compose.yml (PostgreSQL setup)
